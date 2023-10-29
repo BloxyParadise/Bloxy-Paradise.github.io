@@ -48,7 +48,6 @@
             font-family: 'Comic Sans MS', cursive; 
         }
 
-        
         a {
             color: orange;
             text-decoration: none;
@@ -58,6 +57,19 @@
             border-radius: 10px;
             margin: 10px 0;
             text-align: center;
+        }
+
+        /* Dodaj styl dla kontenera TikTok */
+        .tiktok-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Styl obrazka TikTok */
+        .tiktok-image {
+            width: 100px; /* Zmień szerokość obrazka na 100px */
+            height: 100px; /* Zmień wysokość obrazka na 100px */
+            margin-right: 10px; /* Odstęp między obrazkiem a tekstem */
         }
     </style>
 </head>
@@ -78,9 +90,15 @@
         <section>
             <h2>Linki</h2>
             <ul>
-                <li><a href="https://www.tiktok.com/@bloxy.._..paradise.bxb">Tik Tok</a></li>
+                <!-- Dodaj obrazek TikTok obok linku */
+                <li>
+                    <div class="tiktok-container">
+                        <img class="tiktok-image" src="tiktok.png" alt="TikTok Logo">
+                        <a href="https://www.tiktok.com/@bloxy.._..paradise.bxb">Tik Tok</a>
+                    </div>
+                </li>
                 <li><a href="https://discord.gg/cU7FUEjwYC">Discord</a></li>
-                <li><a href="https://www.roblox.com/groups/32982654/Bloxy-Paradise-bxb#!/about">Grupa na roblox</a></li>
+                <li><a href="https://www.roblox.com/groups/32982654/Bloxy-Paradise-bxb#!/about">Grupa na Roblox</a></li>
             </ul>
         </section>
     </main>
