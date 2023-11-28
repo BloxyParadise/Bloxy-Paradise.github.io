@@ -6,7 +6,7 @@
     <meta name="description" content="Strona Bloxy Paradise.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* Twój istniejący styl */
+       
         body {
             background-image: linear-gradient(to bottom, #fffcf5, #ffe5b0);
             margin: 0;
@@ -16,8 +16,8 @@
             justify-content: center;
             min-height: 100vh;
             font-family: 'Comic Sans MS', cursive;
-            overflow: hidden; /* Zapobiega przewijaniu strony */
-            position: relative; /* Ustawienie pozycji względem strony */
+            overflow: hidden; 
+            position: relative; 
         }
 
         header {
@@ -44,7 +44,7 @@
         }
 
         section ul li {
-            margin-bottom: 5px; /* Zmniejszenie odstępu między przyciskami */
+            margin-bottom: 5px;
         }
 
         h1, h2 {
@@ -55,10 +55,10 @@
             color: black;
             text-decoration: none;
             display: block;
-            padding: 10px 20px; /* Ustawienie tej samej wielkości dla każdego przycisku */
+            padding: 10px 20px; 
             border: 2px solid black;
             border-radius: 10px;
-            margin: 5px 0; /* Zmniejszenie odstępu między przyciskami */
+            margin: 5px 0; 
             text-align: center;
             transition: transform 0.3s ease-in-out;
         }
@@ -67,7 +67,7 @@
             transform: scale(1.1);
         }
 
-        /* Styl dla sekcji linków */
+       
         .animated-links {
             display: flex;
             justify-content: center;
@@ -76,14 +76,14 @@
             margin-top: 20px;
         }
 
-        /* Dodatkowy styl dla efektu śniegu */
+       
         .snowflake {
             position: absolute;
             background: #fff;
             width: 5px;
             height: 5px;
             border-radius: 50%;
-            pointer-events: none; /* Zapobiega interakcji z elementami */
+            pointer-events: none; 
             z-index: 1;
             animation: fall linear infinite;
         }
@@ -105,53 +105,42 @@
     </header>
     <nav>
         <ul>
-            <!-- Guziki nawigacyjne -->
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <!-- Dodaj inne guziki nawigacyjne według potrzeb -->
+          
         </ul>
     </nav>
     <main>
         <section id="home">
-            <!-- Zawartość sekcji Home, jeśli potrzebna -->
         </section>
         <section id="about">
-            <!-- Zawartość sekcji About, jeśli potrzebna -->
         </section>
         <section id="services">
             <h2>Linki</h2>
             <ul class="animated-links">
-                <!-- Linki do różnych miejsc -->
                 <li><a href="https://www.tiktok.com/@bloxy.._..paradise.bxb">Tik Tok</a></li>
                 <li><a href="https://discord.gg/cU7FUEjwYC">Discord</a></li>
                 <li><a href="https://www.roblox.com/groups/32982654/Bloxy-Paradise-bxb#!/about">Grupa na Roblox</a></li>
             </ul>
         </section>
-        <!-- Dodaj więcej sekcji według potrzeb -->
     </main>
     <footer>
-        <!-- Treść stopki, jeśli potrzebna -->
     </footer>
 
-    <!-- Skrypt dla efektu śniegu -->
     <script>
-        // Tworzenie śniegu
         const createSnowflake = () => {
             const snowflake = document.createElement('div');
             snowflake.classList.add('snowflake');
-            snowflake.style.left = `${Math.random() * 100}vw`; // Losowe położenie poziome
-            snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Losowa prędkość
+            snowflake.style.left = `${Math.random() * 100}vw`; 
+            snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; 
             document.body.appendChild(snowflake);
 
-            // Usunięcie śniegu po zakończeniu animacji
+          
             snowflake.addEventListener('animationend', () => {
                 snowflake.remove();
                 createSnowflake(); // Tworzenie nowego płatka
             });
         };
 
-        // Tworzenie kilku płatków śniegu na starcie
+      
         for (let i = 0; i < 20; i++) {
             createSnowflake();
         }
