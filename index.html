@@ -6,7 +6,7 @@
     <meta name="description" content="Strona Bloxy Paradise.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-       
+        /* Twój istniejący styl */
         body {
             background-image: linear-gradient(to bottom, #fffcf5, #ffe5b0);
             margin: 0;
@@ -15,63 +15,30 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            font-family: 'Comic Sans MS', cursive; 
+            font-family: 'Comic Sans MS', cursive;
+            overflow: hidden; /* Zapobiega przewijaniu strony */
+            position: relative; /* Ustawienie pozycji względem strony */
         }
 
-        header {
-            text-align: center;
+        /* Dodatkowy styl dla efektu śniegu */
+        .snowflake {
+            position: absolute;
+            background: #fff;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            pointer-events: none; /* Zapobiega interakcji z elementami */
+            z-index: 1;
+            animation: fall linear infinite;
         }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        main {
-            text-align: center;
-        }
-
-        section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        section ul li {
-            margin-bottom: 5px; 
-        }
-
-        h1, h2 {
-            font-family: 'Comic Sans MS', cursive; 
-        }
-
-        a {
-            color: black;
-            text-decoration: none;
-            display: block;
-            padding: 10px 20px; 
-            border: 2px solid black;
-            border-radius: 10px;
-            margin: 5px 0; 
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        a:hover {
-            transform: scale(1.1);
-        }
-
-        
-        .animated-links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 20px;
+        @keyframes fall {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
         }
     </style>
 </head>
@@ -82,12 +49,12 @@
     </header>
     <nav>
         <ul>
-            
+            <!-- Dodaj elementy nawigacji, jeśli są wymagane -->
         </ul>
     </nav>
     <main>
         <section>
-            
+            <!-- Dodaj treść sekcji, jeśli jest wymagana -->
         </section>
         <section>
             <h2>Linki</h2>
@@ -99,7 +66,30 @@
         </section>
     </main>
     <footer>
-       
+        <!-- Dodaj treść stopki, jeśli jest wymagana -->
     </footer>
+
+    <!-- Skrypt dla efektu śniegu -->
+    <script>
+        // Tworzenie śniegu
+        const createSnowflake = () => {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = `${Math.random() * 100}vw`; // Losowe położenie poziome
+            snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Losowa prędkość
+            document.body.appendChild(snowflake);
+
+            // Usunięcie śniegu po zakończeniu animacji
+            snowflake.addEventListener('animationend', () => {
+                snowflake.remove();
+                createSnowflake(); // Tworzenie nowego płatka
+            });
+        };
+
+        // Tworzenie kilku płatków śniegu na starcie
+        for (let i = 0; i < 20; i++) {
+            createSnowflake();
+        }
+    </script>
 </body>
 </html>
