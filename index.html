@@ -20,6 +20,62 @@
             position: relative; /* Ustawienie pozycji względem strony */
         }
 
+        header {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        section ul li {
+            margin-bottom: 5px; /* Zmniejszenie odstępu między przyciskami */
+        }
+
+        h1, h2 {
+            font-family: 'Comic Sans MS', cursive; 
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 10px 20px; /* Ustawienie tej samej wielkości dla każdego przycisku */
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 5px 0; /* Zmniejszenie odstępu między przyciskami */
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Styl dla sekcji linków */
+        .animated-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
         /* Dodatkowy styl dla efektu śniegu */
         .snowflake {
             position: absolute;
@@ -49,24 +105,33 @@
     </header>
     <nav>
         <ul>
-            <!-- Dodaj elementy nawigacji, jeśli są wymagane -->
+            <!-- Guziki nawigacyjne -->
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <!-- Dodaj inne guziki nawigacyjne według potrzeb -->
         </ul>
     </nav>
     <main>
-        <section>
-            <!-- Dodaj treść sekcji, jeśli jest wymagana -->
+        <section id="home">
+            <!-- Zawartość sekcji Home, jeśli potrzebna -->
         </section>
-        <section>
+        <section id="about">
+            <!-- Zawartość sekcji About, jeśli potrzebna -->
+        </section>
+        <section id="services">
             <h2>Linki</h2>
             <ul class="animated-links">
+                <!-- Linki do różnych miejsc -->
                 <li><a href="https://www.tiktok.com/@bloxy.._..paradise.bxb">Tik Tok</a></li>
                 <li><a href="https://discord.gg/cU7FUEjwYC">Discord</a></li>
                 <li><a href="https://www.roblox.com/groups/32982654/Bloxy-Paradise-bxb#!/about">Grupa na Roblox</a></li>
             </ul>
         </section>
+        <!-- Dodaj więcej sekcji według potrzeb -->
     </main>
     <footer>
-        <!-- Dodaj treść stopki, jeśli jest wymagana -->
+        <!-- Treść stopki, jeśli potrzebna -->
     </footer>
 
     <!-- Skrypt dla efektu śniegu -->
