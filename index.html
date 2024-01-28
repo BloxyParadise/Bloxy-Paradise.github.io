@@ -6,7 +6,6 @@
     <meta name="description" content="Strona Bloxy Paradise.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-       
         body {
             background-image: linear-gradient(to bottom, #fffcf5, #ffe5b0);
             margin: 0;
@@ -67,34 +66,12 @@
             transform: scale(1.1);
         }
 
-       
         .animated-links {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             margin-top: 20px;
-        }
-
-       
-        .snowflake {
-            position: absolute;
-            background: #fff;
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            pointer-events: none; 
-            z-index: 1;
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(-100%);
-            }
-            100% {
-                transform: translateY(100vh);
-            }
         }
     </style>
 </head>
@@ -121,30 +98,9 @@
                 <li><a href="https://www.roblox.com/groups/32982654/Bloxy-Paradise-bxb#!/about">Grupa na Roblox</a></li>
             </ul>
         </section>
-
     </main>
     <footer>
     </footer>
-
-    <script>
-        const createSnowflake = () => {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-            snowflake.style.left = `${Math.random() * 100}vw`; 
-            snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; 
-            document.body.appendChild(snowflake);
-
-          
-            snowflake.addEventListener('animationend', () => {
-                snowflake.remove();
-                createSnowflake(); // Tworzenie nowego płatka
-            });
-        };
-
-      
-        for (let i = 0; i < 20; i++) {
-            createSnowflake();
-        }
-    </script>
+  
 </body>
 </html>
